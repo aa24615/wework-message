@@ -68,10 +68,10 @@
 
         <dependency>
             <groupId>com.tencent.wework</groupId>
-            <artifactId>wework-sdk-win</artifactId>
+            <artifactId>wework-sdk</artifactId>
             <version>3.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/wework-sdk-win-3.0.jar</systemPath>
+            <systemPath>${project.basedir}/lib/wework-sdk-3.0.jar</systemPath>
         </dependency>
 
     </dependencies>
