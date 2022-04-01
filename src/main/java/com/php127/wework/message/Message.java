@@ -108,11 +108,11 @@ public class Message {
     }
 
     public ArrayList<Object> getList() throws Exception {
-        return this.getList(0,100);
+        return this.getList(0, 100);
     }
 
     //获取列表
-    public  ArrayList<Object> getList(long seq, int limit) throws Exception {
+    public ArrayList<Object> getList(long seq, int limit) throws Exception {
 
 
         long slice = Finance.NewSlice();
@@ -129,7 +129,7 @@ public class Message {
 
 
         if (errcode != 0) {
-            throw new Exception("获取失败 "+"errcode: " + errcode + " errmsg: " + errmsg);
+            throw new Exception("获取失败 " + "errcode: " + errcode + " errmsg: " + errmsg);
         }
 
         JSONArray chatdata = data.getJSONArray("chatdata");
@@ -242,7 +242,7 @@ public class Message {
 
             String ext = this.getExt(json);
 
-            media_path = this.getSavePath()  + "/" + seq + "." + ext;
+            media_path = this.getSavePath() + "/" + seq + "." + ext;
 
             this.downMedia(sdkfileid, media_path);
         }
@@ -317,7 +317,7 @@ public class Message {
             content = data.getJSONObject("doc");
         } else if (msgtype.equals("external_redpacket")) {
             content = data.getJSONObject("redpacket");
-        } else if(!msgtype.equals("")){
+        } else if (!msgtype.equals("")) {
             content = data.getJSONObject(msgtype);
         }
 

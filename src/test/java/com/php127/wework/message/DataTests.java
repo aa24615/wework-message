@@ -11,6 +11,6 @@ public class DataTests {
 
         Data data = new Data();
         data.setText("test");
-        Assertions.assertSame("test",data.getText());
+        Assertions.assertSame("test", data.getText());
     }
 }
